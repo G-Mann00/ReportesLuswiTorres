@@ -15,13 +15,13 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.06579cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.76458cm</Width>
+              <Width>3.19274cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.72757cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -524,10 +524,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsReporte</DataSetName>
-        <Top>0.51125cm</Top>
-        <Left>0.99396cm</Left>
+        <Top>0.45833cm</Top>
+        <Left>0.38319cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.76458cm</Width>
+        <Width>18.9861cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

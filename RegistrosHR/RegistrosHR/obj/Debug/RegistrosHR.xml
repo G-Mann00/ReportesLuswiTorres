@@ -1,0 +1,231 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RegistrosHR
+</name>
+</assembly>
+<members>
+<member name="T:RegistrosHR.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:RegistrosHR.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:RegistrosHR.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.countriesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.departmentsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.dependentsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.employeesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.jobsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.locationsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.regionsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.RptJobEmployeesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.countriesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.departmentsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.dependentsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.employeesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.jobsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.locationsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.regionsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.RptJobEmployeesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.countriesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.departmentsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.dependentsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.employeesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.jobsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.locationsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.regionsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHR.RptJobEmployeesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.countriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.departmentsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.dependentsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.employeesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.jobsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.locationsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.regionsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.RptJobEmployeesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.UpdateUpdatedRows(RegistrosHR.DsDBHR,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.UpdateInsertedRows(RegistrosHR.DsDBHR,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.UpdateDeletedRows(RegistrosHR.DsDBHR,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.UpdateAll(RegistrosHR.DsDBHR)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:RegistrosHR.DsDBHRTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

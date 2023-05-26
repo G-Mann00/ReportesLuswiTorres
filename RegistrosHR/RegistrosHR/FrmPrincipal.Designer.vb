@@ -23,6 +23,7 @@ Partial Class FrmPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GbxDatosBusqueda = New System.Windows.Forms.GroupBox()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.CbxCampo = New System.Windows.Forms.ComboBox()
@@ -36,23 +37,34 @@ Partial Class FrmPrincipal
         '
         'GbxDatosBusqueda
         '
+        Me.GbxDatosBusqueda.Controls.Add(Me.BtnImprimir)
         Me.GbxDatosBusqueda.Controls.Add(Me.BtnBuscar)
         Me.GbxDatosBusqueda.Controls.Add(Me.TxtBuscar)
         Me.GbxDatosBusqueda.Controls.Add(Me.CbxCampo)
         Me.GbxDatosBusqueda.Controls.Add(Me.LblFiltrar)
         Me.GbxDatosBusqueda.Location = New System.Drawing.Point(14, 12)
         Me.GbxDatosBusqueda.Name = "GbxDatosBusqueda"
-        Me.GbxDatosBusqueda.Size = New System.Drawing.Size(730, 75)
+        Me.GbxDatosBusqueda.Size = New System.Drawing.Size(776, 75)
         Me.GbxDatosBusqueda.TabIndex = 0
         Me.GbxDatosBusqueda.TabStop = False
         Me.GbxDatosBusqueda.Text = "Seleccione por que campo desea buscar "
         '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImprimir.Location = New System.Drawing.Point(670, 26)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(94, 36)
+        Me.BtnImprimir.TabIndex = 3
+        Me.BtnImprimir.Text = "Imprimir"
+        Me.BtnImprimir.UseVisualStyleBackColor = True
+        '
         'BtnBuscar
         '
         Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscar.Location = New System.Drawing.Point(645, 33)
+        Me.BtnBuscar.Location = New System.Drawing.Point(570, 26)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscar.Size = New System.Drawing.Size(94, 36)
         Me.BtnBuscar.TabIndex = 3
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
@@ -60,9 +72,9 @@ Partial Class FrmPrincipal
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(266, 33)
+        Me.TxtBuscar.Location = New System.Drawing.Point(288, 33)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(368, 22)
+        Me.TxtBuscar.Size = New System.Drawing.Size(271, 26)
         Me.TxtBuscar.TabIndex = 2
         '
         'CbxCampo
@@ -70,10 +82,10 @@ Partial Class FrmPrincipal
         Me.CbxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CbxCampo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxCampo.FormattingEnabled = True
-        Me.CbxCampo.Items.AddRange(New Object() {"Profesion", "Nombres", "Apellidos"})
-        Me.CbxCampo.Location = New System.Drawing.Point(89, 31)
+        Me.CbxCampo.Items.AddRange(New Object() {"Profesión", "Nombres", "Apellidos"})
+        Me.CbxCampo.Location = New System.Drawing.Point(114, 31)
         Me.CbxCampo.Name = "CbxCampo"
-        Me.CbxCampo.Size = New System.Drawing.Size(150, 24)
+        Me.CbxCampo.Size = New System.Drawing.Size(150, 28)
         Me.CbxCampo.TabIndex = 1
         '
         'LblFiltrar
@@ -81,7 +93,7 @@ Partial Class FrmPrincipal
         Me.LblFiltrar.AutoSize = True
         Me.LblFiltrar.Location = New System.Drawing.Point(18, 36)
         Me.LblFiltrar.Name = "LblFiltrar"
-        Me.LblFiltrar.Size = New System.Drawing.Size(65, 13)
+        Me.LblFiltrar.Size = New System.Drawing.Size(85, 17)
         Me.LblFiltrar.TabIndex = 0
         Me.LblFiltrar.Text = "Filtrar por:"
         '
@@ -91,30 +103,36 @@ Partial Class FrmPrincipal
         Me.GbxRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbxRegistros.Location = New System.Drawing.Point(14, 106)
         Me.GbxRegistros.Name = "GbxRegistros"
-        Me.GbxRegistros.Size = New System.Drawing.Size(739, 332)
+        Me.GbxRegistros.Size = New System.Drawing.Size(776, 332)
         Me.GbxRegistros.TabIndex = 1
         Me.GbxRegistros.TabStop = False
         Me.GbxRegistros.Text = "Registros Encontrados: 0"
         '
         'DgvRegistrosEmpleado
         '
+        Me.DgvRegistrosEmpleado.AllowUserToAddRows = False
+        Me.DgvRegistrosEmpleado.AllowUserToDeleteRows = False
         Me.DgvRegistrosEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistrosEmpleado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvRegistrosEmpleado.Location = New System.Drawing.Point(3, 18)
+        Me.DgvRegistrosEmpleado.Location = New System.Drawing.Point(3, 22)
+        Me.DgvRegistrosEmpleado.MultiSelect = False
         Me.DgvRegistrosEmpleado.Name = "DgvRegistrosEmpleado"
-        Me.DgvRegistrosEmpleado.Size = New System.Drawing.Size(733, 311)
+        Me.DgvRegistrosEmpleado.ReadOnly = True
+        Me.DgvRegistrosEmpleado.RowHeadersWidth = 51
+        Me.DgvRegistrosEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvRegistrosEmpleado.Size = New System.Drawing.Size(770, 307)
         Me.DgvRegistrosEmpleado.TabIndex = 0
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 450)
+        Me.ClientSize = New System.Drawing.Size(802, 458)
         Me.Controls.Add(Me.GbxRegistros)
         Me.Controls.Add(Me.GbxDatosBusqueda)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "FrmPrincipal"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte de Empleado por Profesion"
         Me.GbxDatosBusqueda.ResumeLayout(False)
         Me.GbxDatosBusqueda.PerformLayout()
@@ -131,4 +149,5 @@ Partial Class FrmPrincipal
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents GbxRegistros As GroupBox
     Friend WithEvents DgvRegistrosEmpleado As DataGridView
+    Friend WithEvents BtnImprimir As Button
 End Class

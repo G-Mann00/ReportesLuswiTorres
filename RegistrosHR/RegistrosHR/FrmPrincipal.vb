@@ -46,32 +46,37 @@ Public Class FrmPrincipal
         Dim dato As String = TxtBuscar.Text & ""
 
         Dim campo As String = "emp.job_title"
-        Dim query = From emp In tblEmp
-                    Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
+        Try
 
-        Select Case CbxCampo.SelectedIndex
-            Case -1
-                query = From emp In tblEmp Where emp.job_title Like dato
+            Dim query = From emp In tblEmp
                         Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
 
-            Case 0
-                query = From emp In tblEmp Where emp.job_title Like dato
-                        Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
+            Select Case CbxCampo.SelectedIndex
+                Case -1
+                    query = From emp In tblEmp Where emp.job_title Like dato
+                            Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
 
-            Case 1
-                query = From emp In tblEmp Where emp.first_name Like dato
-                        Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
+                Case 0
+                    query = From emp In tblEmp Where emp.job_title Like dato
+                            Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
 
-            Case 2
-                query = From emp In tblEmp Where emp.last_name Like dato
-                        Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
-        End Select
+                Case 1
+                    query = From emp In tblEmp Where emp.first_name Like dato
+                            Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
 
-        tbl = crearTabla(query)
+                Case 2
+                    query = From emp In tblEmp Where emp.last_name Like dato
+                            Select emp.job_title, emp.first_name, emp.last_name, emp.email, emp.phone_number, emp.hire_date, emp.salary
+            End Select
 
-        DgvRegistrosEmpleado.DataSource = tbl
-        DgvRegistrosEmpleado.Refresh()
-        GbxRegistros.Text = "Registros encontrados: " & DgvRegistrosEmpleado.Rows.Count
+            tbl = crearTabla(query)
+
+            DgvRegistrosEmpleado.DataSource = tbl
+            DgvRegistrosEmpleado.Refresh()
+            GbxRegistros.Text = "Registros encontrados: " & DgvRegistrosEmpleado.Rows.Count
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Sub verReporte(ByVal t As DataTable, ByVal nombreDS As String, ByVal nombreRpt As String)
@@ -89,10 +94,6 @@ Public Class FrmPrincipal
         End Try
     End Sub
 
-    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
-        buscarRegistro()
-    End Sub
-
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
         verReporte(tbl, "DsReporte", "reportes\RptEmpleadoTrabajo.rdlc")
     End Sub
@@ -101,5 +102,22 @@ Public Class FrmPrincipal
         If TxtBuscar.Text = "" Then
             llenarRegistros()
         End If
+    End Sub
+
+    'Private Sub TxtBuscar_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtBuscar.KeyDown
+    '    If (e.KeyCode = Keys.Enter) Then
+    '        buscarRegistro()
+    '    End If
+    'End Sub
+
+    Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress
+        If (e.KeyChar() = Chr(Keys.Enter)) Then
+            buscarRegistro()
+        End If
+    End Sub
+
+    Private Sub CbxCampo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxCampo.SelectedIndexChanged
+        TxtBuscar.Clear()
+        TxtBuscar.Focus()
     End Sub
 End Class

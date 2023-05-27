@@ -24,7 +24,6 @@ Partial Class FrmPrincipal
     Private Sub InitializeComponent()
         Me.GbxDatosBusqueda = New System.Windows.Forms.GroupBox()
         Me.BtnImprimir = New System.Windows.Forms.Button()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.CbxCampo = New System.Windows.Forms.ComboBox()
         Me.LblFiltrar = New System.Windows.Forms.Label()
@@ -38,7 +37,6 @@ Partial Class FrmPrincipal
         'GbxDatosBusqueda
         '
         Me.GbxDatosBusqueda.Controls.Add(Me.BtnImprimir)
-        Me.GbxDatosBusqueda.Controls.Add(Me.BtnBuscar)
         Me.GbxDatosBusqueda.Controls.Add(Me.TxtBuscar)
         Me.GbxDatosBusqueda.Controls.Add(Me.CbxCampo)
         Me.GbxDatosBusqueda.Controls.Add(Me.LblFiltrar)
@@ -58,16 +56,6 @@ Partial Class FrmPrincipal
         Me.BtnImprimir.TabIndex = 3
         Me.BtnImprimir.Text = "Imprimir"
         Me.BtnImprimir.UseVisualStyleBackColor = True
-        '
-        'BtnBuscar
-        '
-        Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscar.Location = New System.Drawing.Point(570, 26)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(94, 36)
-        Me.BtnBuscar.TabIndex = 3
-        Me.BtnBuscar.Text = "Buscar"
-        Me.BtnBuscar.UseVisualStyleBackColor = True
         '
         'TxtBuscar
         '
@@ -145,7 +133,6 @@ Partial Class FrmPrincipal
     Friend WithEvents GbxDatosBusqueda As GroupBox
     Friend WithEvents LblFiltrar As Label
     Friend WithEvents CbxCampo As ComboBox
-    Friend WithEvents BtnBuscar As Button
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents GbxRegistros As GroupBox
     Friend WithEvents DgvRegistrosEmpleado As DataGridView

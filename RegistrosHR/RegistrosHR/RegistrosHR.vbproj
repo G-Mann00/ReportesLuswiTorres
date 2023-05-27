@@ -97,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsDBHR.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsDBHR.vb">
+      <DependentUpon>DsDBHR.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>

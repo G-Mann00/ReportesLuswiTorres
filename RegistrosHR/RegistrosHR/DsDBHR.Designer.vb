@@ -2946,7 +2946,7 @@ Partial Public Class DsDBHR
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddRptJobEmployeesRow(ByVal job_title As String, ByVal first_name As String, ByVal last_name As String, ByVal email As String, ByVal phone_number As String, ByVal hire_date As Date, ByVal salary As Decimal) As RptJobEmployeesRow
+        Public Overloads Function AddRptJobEmployeesRow(ByVal job_title As String, ByVal first_name As String, ByVal last_name As String, ByVal email As String, ByVal phone_number As String, ByVal hire_date As String, ByVal salary As Decimal) As RptJobEmployeesRow
             Dim rowRptJobEmployeesRow As RptJobEmployeesRow = CType(Me.NewRow,RptJobEmployeesRow)
             Dim columnValuesArray() As Object = New Object() {job_title, first_name, last_name, email, phone_number, hire_date, salary}
             rowRptJobEmployeesRow.ItemArray = columnValuesArray
@@ -2993,7 +2993,7 @@ Partial Public Class DsDBHR
             MyBase.Columns.Add(Me.columnemail)
             Me.columnphone_number = New Global.System.Data.DataColumn("phone_number", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnphone_number)
-            Me.columnhire_date = New Global.System.Data.DataColumn("hire_date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnhire_date = New Global.System.Data.DataColumn("hire_date", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnhire_date)
             Me.columnsalary = New Global.System.Data.DataColumn("salary", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsalary)
@@ -4030,9 +4030,9 @@ Partial Public Class DsDBHR
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property hire_date() As Date
+        Public Property hire_date() As String
             Get
-                Return CType(Me(Me.tableRptJobEmployees.hire_dateColumn),Date)
+                Return CType(Me(Me.tableRptJobEmployees.hire_dateColumn),String)
             End Get
             Set
                 Me(Me.tableRptJobEmployees.hire_dateColumn) = value
@@ -7316,9 +7316,9 @@ Namespace DsDBHRTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        jobs.job_title, employees.first_name, employees.last_name, employee"& _ 
-                "s.email, employees.phone_number, employees.hire_date, employees.salary"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM    "& _ 
-                "        employees INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         jobs ON employees.job_id "& _ 
-                "= jobs.job_id"
+                "s.email, employees.phone_number, convert(nvarchar(10), employees.hire_date, 103)"& _ 
+                " as N'hire_date', employees.salary"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            employees INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
+                "                   jobs ON employees.job_id = jobs.job_id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
